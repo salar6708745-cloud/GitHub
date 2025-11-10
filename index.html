@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salar - Professional Voice Assistant</title>
+    <link rel="stylesheet" href="public/css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="logo">
+                <i class="fas fa-microphone"></i>
+                Salar
+            </h1>
+            <p class="subtitle">Professional Voice Assistant</p>
+        </header>
+
+        <main class="main-content">
+            <div class="voice-interface">
+                <div class="status-message" id="statusMessage">
+                    Click the microphone to start speaking
+                </div>
+
+                <div class="microphone-container">
+                    <button class="microphone-button" id="microphoneButton">
+                        <i class="fas fa-microphone"></i>
+                    </button>
+                    <div class="recording-indicator" id="recordingIndicator">
+                        <div class="pulse-ring"></div>
+                        <span>Listening...</span>
+                    </div>
+                </div>
+
+                <div class="processing-indicator" id="processingIndicator">
+                    <div class="spinner"></div>
+                    <span>Thinking...</span>
+                </div>
+            </div>
+
+            <section class="conversation-area">
+                <h2>Conversation</h2>
+                <div class="transcript-container" id="transcriptContainer">
+                    <div class="transcript-item">
+                        <div class="transcript-empty">
+                            <i class="fas fa-comments"></i>
+                            <p>Your conversation with Salar will appear here</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>Powered by Gemini AI | Developed by Salar</p>
+        </footer>
+    </div>
+
+    <!-- Audio player for responses -->
+    <audio id="audioPlayer" style="display: none;"></audio>
+
+    <!-- Scripts -->
+    <script src="public/js/main.js"></script>
+</body>
+</html>
